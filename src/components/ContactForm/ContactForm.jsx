@@ -24,7 +24,7 @@ const ContactForm = ({ onAdd }) => {
     actions.resetForm();
   };
   return (
-    <Formik 
+    <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={ContactFormScheme}
@@ -32,7 +32,11 @@ const ContactForm = ({ onAdd }) => {
       <Form className={css.form}>
         <div className={css.field}>
           <label className={css.fieldLabel}>Name</label>
-          <Field className={css.fieldInput} type="text" name="contactName"></Field>
+          <Field
+            className={css.fieldInput}
+            type="text"
+            name="contactName"
+          ></Field>
           <ErrorMessage name="contactName" component="span" />
         </div>
         <div className={css.field}>
@@ -40,7 +44,9 @@ const ContactForm = ({ onAdd }) => {
           <Field className={css.fieldInput} type="tel" name="phone"></Field>
           <ErrorMessage name="phone" component="span" />
         </div>
-        <button className={css.formBtn} type="submit">Add contact</button>
+        <button className={css.formBtn} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
